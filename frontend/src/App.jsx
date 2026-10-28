@@ -3,8 +3,10 @@ import Header from "./components/Header";
 import MickeyCenterCard from "./components/MickeyCenterCard";
 import InputBox from "./components/InputBox";
 
-// Backend API URL (FastAPI)
-const API_URL = "http://localhost:8000/api/gemini-response";
+// Use the local FastAPI server during development and the same-origin Vercel API in production.
+const API_URL = import.meta.env.DEV
+  ? "https://micky-ai-py19.vercel.app/api/gemini-response"
+  : "/api/gemini-response";
 
 export default function App() {
   const [status, setStatus] = useState("ready"); // 'ready' | 'listening' | 'thinking' | 'speaking'
