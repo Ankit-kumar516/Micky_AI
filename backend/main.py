@@ -18,6 +18,7 @@ app.add_middleware(
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "https://micky-ai-nu.vercel.app",
+        "https://micky-odsj7jii37-ankit-kumars-projects-467940b2.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
